@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes Movie Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <header>
+        <div id="loginbox">
+            <form action="" id="loginform">
+                <h1>Register</h1>
+                <div>
+                    <input type="text" id="registeruserid" placeholder="User name">
+                    <input type="text" id="registeremail" placeholder="Email or phone number">
+                    <input type="password" id="registerpassword" placeholder="Password">
+                </div>
+                <div>
+                    <button id="registerbtn">Register</button>
+                </div>
+            </form>
+            <div id="need">
+                <p><input type="checkbox" />Remember me</p>
+                <a href="#">Need help?</a>
+            </div>
+            <div id="signup">
+                <p>Already Register <a href="login.html">Login</a></p>
+                <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <span>Learn more.</span></p>
+            </div>
+        </div>
+    </header>
+    <script>
+        const registerBtn = document.getElementById("registerbtn");
+        registerBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const registerUserId = document.getElementById("registeruserid").value;
+            const registerEmailId = document.getElementById("registeremail").value;
+            const registerPass = document.getElementById("registerpassword").value;
+            if (registerUserId != " " && registerEmailId != " " && registerPass != " ") {
+                console.log(registerUserId, registerEmailId, registerPass);
+
+                var yesMovieRegisterData = {
+                    registerUserId: registerUserId,
+                    registerEmailId: registerEmailId,
+                    registerPass: registerPass
+                };
+                localStorage.setItem("yesMovieRegisterData", JSON.stringify(yesMovieRegisterData));
+            }
+            else {
+                alert("Please")
+            }
+        });
+
+
+        let getRegisterData = localStorage.getItem("yesMovieRegisterData");
+        let getedRegisterData = JSON.parse(getRegisterData);
+        console.log("yes", getedRegisterData)
+
+    </script>
+</body>
+
+</html>

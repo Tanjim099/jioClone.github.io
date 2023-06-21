@@ -1,0 +1,1037 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
+
+header{
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.93)),
+    url('https://www.hindustantimes.com/ht-img/img/2023/02/17/1600x900/Shehzada_review_1676629034361_1676629046144_1676629046144.jpg');
+    /* background-image: url("https://www.hindustantimes.com/ht-img/img/2023/02/17/1600x900/Shehzada_review_1676629034361_1676629046144_1676629046144.jpg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header::before{
+    /* content: ""; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* header video{
+    position: absolute;
+    width: 130%;
+    height: 180%;
+    top: -30%;
+} */
+
+
+#mobile_nav{
+    display: none;
+}
+
+header nav{
+    /* background-color: #000; */
+    background: rgba(44, 44, 44, 0.3);
+    width: 100%;
+    height: 10%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+}
+header nav .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav .logo img{
+    width: 50px;
+}
+
+header nav .logo ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav .logo ul li{
+    padding: 3px 15px;
+}
+
+header nav .logo ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+header nav .search_user{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav .search_user input{
+    width: 400px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: rgb(225, 225, 225, .3);
+    color: white;
+    margin-right: 10px;
+}
+
+header nav .search_user input::placeholder{
+    color: white;
+}
+
+header nav .search_user img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+header nav .search_user .search{
+    position: absolute;
+    width: 320px;
+    height: 270px;
+    /* border: 1px solid #ffff; */
+    /* right: 0; */
+    top: 40px;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+
+header nav .search_user .search::-webkit-scrollbar{
+    width: 5px;
+    background: rgb(255, 255, 255, .3);
+    border-radius: 5px;
+    visibility: hidden;
+
+}
+
+header nav .search_user .search::-webkit-scrollbar-thumb{
+    width: 5px;
+    background: rgb(255, 255, 255, .4);
+    border-radius: 5px;
+    visibility: hidden;
+
+}
+header nav .search_user .search:hover:-webkit-scrollbar{
+    visibility: visible;
+
+}
+header nav .search_user .search:hover:-webkit-scrollbar-thumb{
+    visibility: visible;
+
+}
+header nav .search_user .search .card{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 3px 0px;
+    text-decoration: none;
+    display: none;
+}
+
+header nav .search_user .search .card::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255, .1);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    z-index: -1;
+}
+
+header nav .search_user .search .card img{
+    width: 40px;
+    height: 90%;
+    border-radius: 0;
+    margin-left: 8px;
+}
+
+header nav .search_user .search .card .cont{
+    margin-left: 10px;
+    color: white;
+}
+
+header nav .search_user .search .card .cont h3{
+    font-size: 18px;
+    line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+}
+
+header nav .search_user .search .card .cont p{
+    font-size: 15px;
+    color: rgb(255, 255, 255, .8);
+}
+header nav .search_user .search .card .cont span{
+    background: yellow;
+    color: black;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 10px;
+    font-weight: 500;
+}
+
+header .content{
+    position: relative;
+    color: white;
+    margin-top: 50px;
+    padding-left: 50px;
+    margin-top: 10%;
+}
+
+header .content h1{
+    font-size: 50px;
+
+}
+header .content p{
+    font-size: 15px;
+    width: 350px;
+    word-break: break-all;
+}
+
+header .content .details{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+header .content .details h6{
+    color: rgb(255, 255, 255, .8);
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+header .content .details h5{
+    color: rgb(142, 230, 48);
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+header .content .details h4{
+    color: rgb(214, 214, 214);
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+header .content .details h3{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+header .content .details h3 span{
+    background: yellow;
+    color: black;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 10px;
+    font-weight: 500;
+}
+
+header .content .details h3 i{
+    margin-right: 5px;
+}
+
+
+header .content .btns{
+    margin-top: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+header .content .btns a{
+    padding: 8px 12px;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #00bdff, #0079ff);
+    border-radius: 5px;
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+    animation: button 1s linear infinite;
+}
+
+@keyframes button {
+    0%{background: linear-gradient(0deg, #00bdff, #0079ff);}
+    12%{background: linear-gradient(45deg, #00bdff, #0079ff);}
+    24%{background: linear-gradient(95deg, #00bdff, #0079ff);}
+    36%{background: linear-gradient(145deg, #00bdff, #0079ff);}
+    48%{background: linear-gradient(195deg, #00bdff, #0079ff);}
+    72%{background: linear-gradient(245deg, #00bdff, #0079ff);}
+    100%{background: linear-gradient(365deg, #00bdff, #0079ff);}
+}
+
+.trendingmovie_section{
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* padding: 0px 50px; */
+    color: white;
+    bottom: 120px;
+}
+
+.trendingmovie_section h4{
+    font-size: 20px;
+}
+.trendingmovie_section .cards{
+    position: relative;
+    width: 100%;
+    /* height: 290px; */
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.trendingmovie_section .cards::-webkit-scrollbar{
+    display: none;
+}
+
+
+.trendingmovie_section .cards .card{
+    position: relative;
+    min-width: 200px;
+    height: 250px;
+    /* border: 1px solid red; */
+    border-radius: 8px;
+    margin-right: 8px;
+    background: #000;
+    transition: .3s linear;
+}
+
+.trendingmovie_section .cards .card .poster{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: relative;
+}
+
+.trendingmovie_section .cards .card:hover{
+    min-width: 500px;
+    overflow: hidden;
+    transition: .3s linear;
+}
+
+.trendingmovie_section .cards .card .rest-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s linear;
+}
+
+.trendingmovie_section .cards .card .rest-card img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.trendingmovie_section .cards .card .rest-card::after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000);
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.trendingmovie_section .cards .card .rest-card .cont{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    color: white;
+    padding: 0px 20px;
+    z-index: 99999;
+    
+}
+
+.trendingmovie_section .cards .card .rest-card .cont .sub{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.trendingmovie_section .cards .card .rest-card .cont .sub p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.trendingmovie_section .cards .card .rest-card .cont .sub h3{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.trendingmovie_section .cards .card .rest-card .cont .sub h3 span{
+    background: yellow;
+    color: black;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 10px;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+.trendingmovie_section .cards .card .rest-card .cont .sub h3 i{
+    margin-right: 3px;
+}
+
+.trendingmovie_section .cards .card:hover .rest-card{
+    opacity: 1;
+}
+
+.trendingmovie_section .fa-angle-left, .fa-angle-right{
+    position: absolute;
+    top: 50%;
+    /* left: 3%; */
+    width: 35px;
+    height: 35px;
+    background: rgb(255, 255, 255, .8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s linear;
+    z-index: 99999999999;
+    text-align: center;
+    /* opacity: 0; */
+}
+
+.trendingmovie_section .fa-angle-right{
+    left: unset;
+    right: 1%;
+}
+
+.trendingmovie_section .fa-angle-right, .fa-angle-left{
+    /* opacity: 1; */
+};
+
+
+/* =================  */
+
+.bollywoodmovies{
+    position: relative;
+    width: 100%;
+    /* height: auto; */
+    /* padding: 0px 50px; */
+    color: white;
+    bottom: 220px;
+    /* margin-top: 400px; */
+    border: 1px solid red;
+}
+
+.bollywoodmovies h4{
+    /* margin-top: 150px; */
+    font-size: 20px;
+    color: white;
+}
+
+#bollywoodmoviescards{
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+#bollywoodmoviescards::-webkit-scrollbar{
+    display: none;
+}
+.bollywoodmovies .bollywoodmovies_cards{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.bollywoodmovies .bollywoodmovies_cards .card{
+    position: relative;
+    min-width: 200px;
+    height: 250px;
+    /* border: 1px solid red; */
+    border-radius: 8px;
+    margin-right: 8px;
+    background: #000;
+    transition: .3s linear;
+}
+
+.bollywoodmovies .bollywoodmovies_cards .card .poster{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: relative;
+}
+
+.bollywoodmovies .bollywoodmovies_cards .card:hover{
+    min-width: 500px;
+    overflow: hidden;
+    transition: .3s linear;
+}
+
+.bollywoodmovies .bollywoodmovies_cards .card .rest-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s linear;
+}
+
+.bollywoodmovies .bollywoodmovies_cards .card .rest-card img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.bollywoodmovies .bollywoodmovies_cards .card .rest-card::after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000);
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.bollywoodmovies .bollywoodmovies_cards .card .rest-card .cont{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    color: white;
+    padding: 0px 20px;
+    z-index: 99999;
+    
+}
+
+.bollywoodmovies .bollywoodmovies_cards .card .rest-card .cont .sub{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bollywoodmovies .bollywoodmovies_cards .card .rest-card .cont .sub p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.bollywoodmovies .bollywoodmovies_cards .card .rest-card .cont .sub h3{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.bollywoodmovies .bollywoodmovies_cards .card .rest-card .cont .sub h3 span{
+    background: yellow;
+    color: black;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 10px;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+.bollywoodmovies .bollywoodmovies_cards .card .rest-card .cont .sub h3 i{
+    margin-right: 3px;
+}
+
+.bollywoodmovies .bollywoodmovies_cards .card:hover .rest-card{
+    opacity: 1;
+}
+
+.bollywoodmovies{
+    position: relative;
+    bottom: 120px;
+}
+.bollywoodmovies i.fa-angle-left{
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    width: 35px;
+    height: 35px;
+    background: rgb(255, 255, 255, .8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s linear;
+    z-index: 99999999999;
+    text-align: center;
+    /* opacity: 0; */
+}
+
+.bollywoodmovies i.fa-angle-right{
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    width: 35px;
+    height: 35px;
+    background: rgb(255, 255, 255, .8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s linear;
+    z-index: 99999999999;
+    text-align: center;
+    /* opacity: 0; */
+}
+
+/* hollywoodmovies */
+
+
+.hollywoodmovies{
+    position: relative;
+    width: 100%;
+    /* height: auto; */
+    /* padding: 0px 50px; */
+    color: white;
+    bottom: 220px;
+}
+
+.hollywoodmovies h4{
+    /* margin-top: 150px; */
+    font-size: 20px;
+    color: white;
+}
+.hollywoodmovies .hollywoodmovies_cards{
+    position: relative;
+    width: 100%;
+    /* height: 290px; */
+    /* border: 1px solid red; */
+    /* margin-top: 150px; */
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+#hollywoodcars{
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.hollywoodmovies #hollywoodcars::-webkit-scrollbar{
+    display: none;
+}
+
+
+.hollywoodmovies .hollywoodmovies_cards .card{
+    position: relative;
+    min-width: 200px;
+    height: 250px;
+    /* border: 1px solid red; */
+    border-radius: 8px;
+    margin-right: 8px;
+    background: #000;
+    transition: .3s linear;
+}
+
+.hollywoodmovies .hollywoodmovies_cards .card .poster{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: relative;
+}
+
+.hollywoodmovies .hollywoodmovies_cards .card:hover{
+    min-width: 500px;
+    overflow: hidden;
+    transition: .3s linear;
+}
+
+.hollywoodmovies .hollywoodmovies_cards .card .rest-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s linear;
+}
+
+.hollywoodmovies .hollywoodmovies_cards .card .rest-card img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.hollywoodmovies .hollywoodmovies_cards .card .rest-card::after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000);
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hollywoodmovies .hollywoodmovies_cards .card .rest-card .cont{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    color: white;
+    padding: 0px 20px;
+    z-index: 99999;
+    
+}
+
+.hollywoodmovies .hollywoodmovies_cards .card .rest-card .cont .sub{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hollywoodmovies .hollywoodmovies_cards .card .rest-card .cont .sub p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.hollywoodmovies .hollywoodmovies_cards .card .rest-card .cont .sub h3{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.hollywoodmovies .hollywoodmovies_cards .card .rest-card .cont .sub h3 span{
+    background: yellow;
+    color: black;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 10px;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+.hollywoodmovies .hollywoodmovies_cards .card .rest-card .cont .sub h3 i{
+    margin-right: 3px;
+}
+
+.hollywoodmovies .hollywoodmovies_cards .card:hover .rest-card{
+    opacity: 1;
+}
+
+.hollywoodmovies{
+    position: relative;
+    bottom: 120px;
+}
+.hollywoodmovies i.fa-angle-left{
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    width: 35px;
+    height: 35px;
+    background: rgb(255, 255, 255, .8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s linear;
+    z-index: 99999999999;
+    text-align: center;
+    /* opacity: 0; */
+}
+
+.hollywoodmovies i.fa-angle-right{
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    width: 35px;
+    height: 35px;
+    background: rgb(255, 255, 255, .8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s linear;
+    z-index: 99999999999;
+    text-align: center;
+    /* opacity: 0; */
+}
+
+/* =============  */
+
+
+#login_box{
+    width: 300px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    right: -20%;
+    top: 10%;
+    transition: .3s linear;
+    padding: 15px 20px;
+    z-index: 99999999999999;
+    display: none;
+}
+
+#login_box.active{
+    right: 0%;
+    transition: .3s linear;
+    display: block;
+}
+#login_box_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+#login_box_user{
+    display: flex;
+    cursor: pointer;
+}
+#login_box_user img{
+    margin-right: 10px;
+}
+
+#login_box_user img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+#login_box_user h3{
+    cursor: pointer;
+    color: white;
+}
+#login_box_main i{
+    width: 40px;
+    color: white;
+}
+/* ============== */
+
+.footer{
+    width: 100%;
+    height: 30%;
+    background-color: black;
+    position: relative;
+    bottom: 100px;
+    padding: 20px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info{
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+.info div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info div a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact{
+    display: flex;
+    gap: 20px;
+}
+
+.socialmedia{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.socialmedia h1{
+    font-size: 30px;
+    color: white;
+}
+.socialmediaicon{
+    display: flex;
+    gap: 10px;
+}
+.socialmediaicon a{
+    text-decoration: none
+}
+.socialmediaicon i{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.downloadapp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.downloadapp h1{
+    font-size: 30px;
+    color: white;
+}
+.downloadapp img{
+    width: 250px;
+    cursor: pointer;
+}
+/* ============== */
+
+@media only screen and (max-width: 600px) {
+
+    header{
+        height: 30%;
+    }
+    header nav{
+        height: 15%;
+        padding: 10px 10px;
+    }
+    header nav .logo ul{
+        display: none;
+    }
+    header nav .search_user input{
+        width: 150px;
+    }
+
+    .search_user img{
+        display: none;
+    }
+
+    #login_box{
+        width: 100%;
+        /* height: 500px; */
+        background: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        /* right: -20%; */
+        left: 0;
+        top: 14%;
+        transition: .3s linear;
+        padding: 15px 20px;
+        z-index: 99999999999999;
+    }
+
+    header .content{
+        display: none;
+    }
+
+    #mobile_nav{
+        z-index: 99999999999999;
+        width: 100%;
+        /* height: 15%; */
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 25px;
+        color: wheat;
+        /* top: 100%; */
+        position: fixed;
+        bottom: 0;
+    }
+    #mobile_nav a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+    }
+
+    #morebox{
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: -100%;
+        z-index: 99999999;
+        transition: .3s linear;
+        overflow: hidden;
+    }
+    #morebox.active{
+        right: 0%;
+        transition: .3s linear;
+        display: block;
+    }
+
+    .trendingmovie_section .cards .card{
+        min-width: 150px;
+        height: 200px;
+        /* border: 1px solid red; */
+    }
+
+    /* footer */
+    .footer{
+        display: none;
+    }
+  }
